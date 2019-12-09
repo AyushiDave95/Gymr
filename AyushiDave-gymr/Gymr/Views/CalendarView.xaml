@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Gymr.Views.CalendarView"
+             >
+    <ContentPage.Content>
+       <Grid ColumnSpacing="0" Margin="7,25,7,10" RowSpacing="0">
+    
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>           
+         </Grid.RowDefinitions>
+         
+          <StackLayout Orientation="Vertical" 
+                       HeightRequest="250"
+                       Margin="5"
+                       BackgroundColor="Transparent"
+                       Grid.Row="0" x:Name="stack_layout"> 
+                
+          </StackLayout>  
+   
+            <ScrollView Grid.Row="1">
+            <StackLayout Orientation="Vertical" 
+                         Margin="5,10,5,10"                       
+                         >
+                
+            <ListView x:Name="listhome_Exercise"
+                      ItemTapped="Handle_ItemTapped"
+                       RowHeight="75"
+                      
+                      SeparatorVisibility="None"
+                        
+                       SeparatorColor="Transparent"
+                      BackgroundColor="Transparent"
+                      >
+                      
+              <ListView.ItemTemplate>
+                 <DataTemplate>
+                   <ViewCell>
+     
+<Frame         Padding="5"
+               Margin="2"
+               HasShadow="false"
+               BackgroundColor="Teal"
+               OutlineColor="Teal"
+               CornerRadius="3"
+               >
+                        
+   <StackLayout Orientation="Vertical"
+                >           
+                
+    <Label Margin="0"
+           Text="{Binding ExerciseName}" 
+           HorizontalOptions="Center"
+           HorizontalTextAlignment="Start"
+           VerticalTextAlignment="Center"
+           TextColor="White" 
+           FontFamily="San Francisco"
+           FontAttributes="Bold"
+           FontSize="24"/>
+    
+     <StackLayout VerticalOptions="EndAndExpand"
+                  Orientation="Horizontal" 
+                  Margin="5,5,5,5"
+                  >
+                           
+          <Label 
+           Text="{Binding ExerciseTime}" 
+           HorizontalTextAlignment="Start"
+           TextColor="White" 
+           FontFamily="San Francisco"
+           FontAttributes="Bold"
+           FontSize="Small"/>  
+             
+                            
+          <Label 
+           Text="{Binding Progress}"        
+           TextColor="White" 
+           HorizontalOptions="EndAndExpand"
+           HorizontalTextAlignment="End"
+           FontFamily="San Francisco"
+           FontAttributes="Bold"
+           FontSize="Small"/> 
+                           
+    </StackLayout>
+                
+   </StackLayout> 
+      
+   </Frame>            
+     
+   
+      </ViewCell>             
+                  </DataTemplate>           
+              </ListView.ItemTemplate>  
+             </ListView>   
+            </StackLayout>
+        
+            </ScrollView>
+     
+        </Grid>
+        
+    </ContentPage.Content>
+</ContentPage>

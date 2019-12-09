@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">iPhoneSimulator</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{A64DBF28-6308-4EDD-B46A-658DA9993764}</ProjectGuid>
+    <ProjectTypeGuids>{FEACFBD2-3405-455C-9665-78FE426C6842};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <TemplateGuid>{6143fdea-f3c2-4a09-aafa-6e230626515e}</TemplateGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>Gymr.iOS</RootNamespace>
+    <IPhoneResourcePrefix>Resources</IPhoneResourcePrefix>
+    <AssemblyName>Gymr.iOS</AssemblyName>
+    <MtouchHttpClientHandler>NSUrlSessionHandler</MtouchHttpClientHandler>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhoneSimulator' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\iPhoneSimulator\Debug</OutputPath>
+    <DefineConstants>DEBUG</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+    <MtouchArch>x86_64</MtouchArch>
+    <MtouchLink>SdkOnly</MtouchLink>
+    <MtouchDebug>true</MtouchDebug>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhoneSimulator' ">
+    <DebugType>none</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\iPhoneSimulator\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <MtouchLink>None</MtouchLink>
+    <MtouchArch>x86_64</MtouchArch>
+    <ConsolePause>false</ConsolePause>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhone' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\iPhone\Debug</OutputPath>
+    <DefineConstants>DEBUG</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+    <MtouchArch>ARMv7</MtouchArch>
+    <CodesignKey>iPhone Developer</CodesignKey>
+    <MtouchDebug>true</MtouchDebug>
+    <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
+    <MtouchLink>SdkOnly</MtouchLink>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhone' ">
+    <DebugType>none</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\iPhone\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <MtouchArch>ARM64</MtouchArch>
+    <ConsolePause>false</ConsolePause>
+    <CodesignKey>iPhone Developer</CodesignKey>
+    <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Ad-Hoc|iPhone' ">
+    <DebugType>none</DebugType>
+    <Optimize>True</Optimize>
+    <OutputPath>bin\iPhone\Ad-Hoc</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>False</ConsolePause>
+    <MtouchArch>ARM64</MtouchArch>
+    <BuildIpa>True</BuildIpa>
+    <CodesignProvision>Automatic:AdHoc</CodesignProvision>
+    <CodesignKey>iPhone Distribution</CodesignKey>
+    <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'AppStore|iPhone' ">
+    <DebugType>none</DebugType>
+    <Optimize>True</Optimize>
+    <OutputPath>bin\iPhone\AppStore</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>False</ConsolePause>
+    <MtouchArch>ARM64</MtouchArch>
+    <CodesignProvision>Automatic:AppStore</CodesignProvision>
+    <CodesignKey>iPhone Distribution</CodesignKey>
+    <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="Main.cs" />
+    <Compile Include="AppDelegate.cs" />
+    <None Include="Entitlements.plist" />
+    <None Include="Info.plist" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <InterfaceDefinition Include="Resources\LaunchScreen.storyboard" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon1024.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon180.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon167.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon152.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon120.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon87.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon80.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon76.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon60.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon58.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon40.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon29.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon20.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\home.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\home.imageset\home.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="Xamarin.iOS" />
+    <Reference Include="XamForms.Controls.Calendar">
+      <HintPath>..\packages\XamForms.Controls.Calendar.1.1.1\lib\Xamarin.iOS10\XamForms.Controls.Calendar.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Xamarin.Forms" Version="3.3.0.912540" />
+    <PackageReference Include="Xamarin.Forms" Version="3.2.0.871581" />
+    <PackageReference Include="SkiaSharp">
+      <Version>1.60.3</Version>
+    </PackageReference>
+    <PackageReference Include="SkiaSharp.Views.Forms">
+      <Version>1.60.3</Version>
+    </PackageReference>
+    <PackageReference Include="SkiaSharp.Views">
+      <Version>1.60.3</Version>
+    </PackageReference>
+    <PackageReference Include="Xam.Plugins.Forms.ImageCircle">
+      <Version>3.0.0.5</Version>
+    </PackageReference>
+    <PackageReference Include="sqlite-net-pcl">
+      <Version>1.5.231</Version>
+    </PackageReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Assets.xcassets\home.imageset\" />
+    <Folder Include="Resources\Exercises\" />
+    <Folder Include="Resources\icon\" />
+    <Folder Include="Resources\alphabet\" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\home.png" />
+    <BundleResource Include="Resources\calendar.png" />
+    <BundleResource Include="Resources\exercise.png" />
+    <BundleResource Include="Resources\add_square.png" />
+    <BundleResource Include="Resources\profilePic.jpg" /> 
+    <BundleResource Include="Resources\Run.jpg" />
+
+    <BundleResource Include="Resources\running.png" />
+    <BundleResource Include="Resources\right-arrow.png" />
+    <BundleResource Include="Resources\barbell.jpeg" />
+    <BundleResource Include="Resources\bench_press.jpeg" />
+    <BundleResource Include="Resources\women_barbell.jpeg" />
+    <BundleResource Include="Resources\workout.jpeg" />
+    <BundleResource Include="Resources\yoga.jpeg" />
+    <BundleResource Include="Resources\play-button.png" />
+    <BundleResource Include="Resources\exercise.jpeg" />
+    <BundleResource Include="Resources\foot.jpeg" />
+    <BundleResource Include="Resources\barbell_2.jpeg" />
+    <BundleResource Include="Resources\workout_1.jpeg" />
+    <BundleResource Include="Resources\workout_2.jpeg" />
+    <BundleResource Include="Resources\Flexibility.jpeg" />
+    <BundleResource Include="Resources\Balance.jpeg" />
+    <BundleResource Include="Resources\Strength.jpeg" />
+    <BundleResource Include="Resources\logofinal.png" />
+    <BundleResource Include="Resources\profile.png" />
+    <BundleResource Include="Resources\back.png" />
+    <BundleResource Include="Resources\signup-back.jpeg" />
+    <BundleResource Include="Resources\user.png" />
+    <BundleResource Include="Resources\plus.png" />
+    <BundleResource Include="Resources\Exercises\back-extension.jpg" />
+    <BundleResource Include="Resources\Exercises\ab-wheel.jpg" />
+    <BundleResource Include="Resources\Exercises\cable-crunch.gif" />
+    <BundleResource Include="Resources\Exercises\bench-dip.jpg" />
+    <BundleResource Include="Resources\icon\left-arrow.png" />
+    <BundleResource Include="Resources\icon\back-button.png" />
+    <BundleResource Include="Resources\icon\back.png" />
+    <BundleResource Include="Resources\icon\left-arrow-blue.png" />
+    <BundleResource Include="Resources\icon\app-icon.png" />
+    <BundleResource Include="Resources\profileblank.png" />
+    <BundleResource Include="Resources\backfinal.png" />
+    <BundleResource Include="Resources\icon\profile.png" />
+    <BundleResource Include="Resources\Gymr.db" />
+    <BundleResource Include="Resources\alphabet\a.png" />
+    <BundleResource Include="Resources\alphabet\b.png" />
+    <BundleResource Include="Resources\icon\right-arrow.png" />
+    <BundleResource Include="Resources\icon\add.png" />
+    <BundleResource Include="Resources\icon\minus.png" />
+    <BundleResource Include="Resources\icon\delete.png" />
+    <BundleResource Include="Resources\icon\edit.png" />
+    <BundleResource Include="Resources\alphabet\c.png" />
+    <BundleResource Include="Resources\alphabet\d.png" />
+    <BundleResource Include="Resources\alphabet\f.png" />
+    <BundleResource Include="Resources\alphabet\g.png" />
+    <BundleResource Include="Resources\alphabet\h.png" />
+    <BundleResource Include="Resources\alphabet\i.png" />
+    <BundleResource Include="Resources\alphabet\j.png" />
+    <BundleResource Include="Resources\alphabet\k.png" />
+    <BundleResource Include="Resources\alphabet\l.png" />
+    <BundleResource Include="Resources\alphabet\m.png" />
+    <BundleResource Include="Resources\alphabet\n.png" />
+    <BundleResource Include="Resources\alphabet\o.png" />
+    <BundleResource Include="Resources\alphabet\p.png" />
+    <BundleResource Include="Resources\alphabet\q.png" />
+    <BundleResource Include="Resources\alphabet\r.png" />
+    <BundleResource Include="Resources\alphabet\s.png" />
+    <BundleResource Include="Resources\alphabet\t.png" />
+    <BundleResource Include="Resources\alphabet\u.png" />
+    <BundleResource Include="Resources\alphabet\v.png" />
+    <BundleResource Include="Resources\alphabet\w.png" />
+    <BundleResource Include="Resources\alphabet\x.png" />
+    <BundleResource Include="Resources\alphabet\y.png" />
+    <BundleResource Include="Resources\alphabet\z.png" />
+ </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\Desktop\lib\XamForms.Controls.Calendar-master\XamForms.Controls.Calendar\XamForms.Controls.Calendar.csproj">
+      <Project>{DA721ED1-72ED-43EF-B909-FF4F037D6549}</Project>
+      <Name>XamForms.Controls.Calendar</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Desktop\lib\XamForms.Controls.Calendar-master\XamForms.Controls.Calendar.iOS\XamForms.Controls.Calendar.iOS.csproj">
+      <Project>{3AFDA59E-C3AF-4848-8C1F-674932E118FF}</Project>
+      <Name>XamForms.Controls.Calendar.iOS</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
+  <Import Project="..\Gymr\Gymr.projitems" Label="Shared" />
+</Project>

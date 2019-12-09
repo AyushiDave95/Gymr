@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Gymr.Views.ExerciseDetail"
+             xmlns:controls="clr-namespace:Gymr.Template"
+            >
+   
+       <ContentPage.BindingContext>
+        
+        <controls:ExerciseSetsViewModel/>
+        
+    </ContentPage.BindingContext> 
+    
+    
+        <StackLayout Orientation="Vertical">
+       
+        <Grid HeightRequest="500">
+            
+             <Image Source="exercise.jpeg" 
+                       HorizontalOptions="FillAndExpand"
+                       VerticalOptions="FillAndExpand" 
+                       Aspect="Fill" />
+            
+            <StackLayout Orientation="Vertical"
+                         BackgroundColor="#44000000">
+                  <StackLayout Orientation="Horizontal" Margin="0,30,0,0" BackgroundColor="Transparent">
+                        <Image Source="icon/back.png" 
+                               HeightRequest="25" 
+                               WidthRequest="25" 
+                               HorizontalOptions="Start">
+                            <Image.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="OnTapped" NumberOfTapsRequired="1" />
+                            </Image.GestureRecognizers>
+                        </Image>
+                    </StackLayout>
+                
+                 <Grid HorizontalOptions="CenterAndExpand" RowSpacing="0" WidthRequest="170">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition />
+                            <ColumnDefinition Width="Auto" />
+                            <ColumnDefinition />
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto" />
+                        </Grid.RowDefinitions>
+                        <Label Grid.Column="0" Grid.Row="0" FontAttributes="Bold" Text="05" TextColor="White" FontSize="55" HorizontalOptions="CenterAndExpand" />
+                        <Label Grid.Column="0" Grid.Row="1" FontAttributes="Bold" Text="Min" TextColor="White" HorizontalOptions="CenterAndExpand" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" />
+                        <Label Grid.Column="1" Grid.Row="0" Text=":" TextColor="White" FontSize="55" HorizontalOptions="CenterAndExpand" />
+                        <Label Grid.Column="2" Grid.Row="0" FontAttributes="Bold" Text="25" TextColor="White" FontSize="55" HorizontalOptions="CenterAndExpand" />
+                        <Label Grid.Column="2" Grid.Row="1" TextColor="White" HorizontalOptions="CenterAndExpand" FontAttributes="Bold" Text="Sec" />
+                    </Grid>
+                   
+                  <AbsoluteLayout x:Name="ViewControls" 
+                                    VerticalOptions="CenterAndExpand" 
+                                    HorizontalOptions="CenterAndExpand" 
+                                    AbsoluteLayout.LayoutBounds="1,1,1,.50"
+                                    AbsoluteLayout.LayoutFlags="All" 
+                                    Margin="0">
+                        <StackLayout Orientation="Vertical" Margin="10,0,10,10" BackgroundColor="Transparent" AbsoluteLayout.LayoutFlags="All" AbsoluteLayout.LayoutBounds="1,1,1,1">
+                            <Grid Margin="1" HorizontalOptions="Center">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="40" />
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="110" />
+                                    <ColumnDefinition Width="110" />
+                                    <ColumnDefinition Width="110" />
+                                </Grid.ColumnDefinitions>
+                                <Button Text="Start" BackgroundColor="#00000000" BorderRadius="4" BorderColor="White" BorderWidth="2" Clicked="OnTapped" FontAttributes="Bold" TextColor="White" HorizontalOptions="FillAndExpand" Grid.Column="0" />
+                                <Button Text="Stop" BackgroundColor="#00000000" BorderRadius="4" BorderColor="White" BorderWidth="2" FontAttributes="Bold" TextColor="White" HorizontalOptions="FillAndExpand" Grid.Column="1" />
+                                <Button Text="Done" BackgroundColor="#00000000" BorderRadius="4" BorderColor="White" BorderWidth="2" FontAttributes="Bold" TextColor="White" HorizontalOptions="FillAndExpand" Grid.Column="2" />
+                            </Grid>
+                        </StackLayout>
+                    </AbsoluteLayout>
+                  
+                
+            </StackLayout>
+            
+        </Grid>
+        
+        <StackLayout Orientation="Vertical"  Margin="3,5,3,0"  BackgroundColor="Transparent">
+            
+            <Grid>
+                <Grid.RowDefinitions>
+                     <RowDefinition Height="30" />
+                     <RowDefinition Height="30" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="60"/>
+                    <ColumnDefinition Width="100"/>
+                    <ColumnDefinition Width="100"/>
+                    <ColumnDefinition Width="80"/>
+                </Grid.ColumnDefinitions>
+                
+                <Label Text="Sets" Grid.Row="0" FontAttributes="Bold"  Grid.Column="0" HorizontalOptions="Center" VerticalOptions="Center"/>
+                 <Label Text="lbs" Grid.Row="0" FontAttributes="Bold" Grid.Column="1" HorizontalOptions="Center" VerticalOptions="Center"/>
+                <Label Text="Reps" Grid.Row="0" FontAttributes="Bold" Grid.Column="2" HorizontalOptions="Center" VerticalOptions="Center"/>
+               
+                
+                <StackLayout Orientation="Horizontal" Grid.Row="1" Grid.Column="1" BackgroundColor="Transparent">
+                   <Image Source="icon/add" 
+                          HeightRequest="23" Margin="10,0,0,0"
+                          HorizontalOptions="StartAndExpand" 
+                          VerticalOptions="Center">
+                         <Image.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="onclick_plusVal1" NumberOfTapsRequired="1" />
+                            </Image.GestureRecognizers>
+                        </Image>
+                    
+                    <Label Text="0" x:Name="lbl_val1" HorizontalOptions="CenterAndExpand" FontSize="Default" VerticalOptions="Center"/>
+                    <Image Source="icon/minus" 
+                           HeightRequest="23" Margin="0,0,10,0" 
+                           HorizontalOptions="EndAndExpand"
+                           VerticalOptions="Center">
+                        <Image.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="onclick_minusVal1" NumberOfTapsRequired="1" />
+                            </Image.GestureRecognizers>
+                        </Image>
+                 </StackLayout>
+                
+                  <StackLayout Orientation="Horizontal" Grid.Row="1" Margin="10,0,0,0" Grid.Column="2" BackgroundColor="Transparent">
+                   <Image Source="icon/add" 
+                          HeightRequest="23" 
+                          HorizontalOptions="StartAndExpand" 
+                          VerticalOptions="Center">
+                    
+                     <Image.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="onclick_plusVal2" NumberOfTapsRequired="1" />
+                            </Image.GestureRecognizers>
+                    
+                    </Image>
+                        
+                    <Label Text="0" x:Name="lbl_val2" HorizontalOptions="CenterAndExpand" FontSize="Default" VerticalOptions="Center"/>
+                    <Image Source="icon/minus" HeightRequest="23"
+                           Margin="0,0,10,0" 
+                           HorizontalOptions="EndAndExpand" 
+                           VerticalOptions="Center">
+                        
+                       <Image.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="onclick_minusVal2" NumberOfTapsRequired="1" />
+                            </Image.GestureRecognizers> 
+                        
+                     </Image>   
+                  
+                </StackLayout>
+                
+                <Button Text="ADD" BackgroundColor="Transparent" 
+                        Margin="5,0,0,0"
+                        Clicked="onSaveClick"
+                        HorizontalOptions="End"
+                        VerticalOptions="EndAndExpand"
+                        Grid.Row="1" Grid.Column="3" WidthRequest="50"
+                        
+                        />
+                
+            </Grid>
+            
+            <StackLayout Orientation="Vertical">
+            
+            <ListView x:Name="list_exerciseSet"
+                      SeparatorColor="Transparent"
+                      Margin="3,0,3,0"
+                      RowHeight="35"
+                       SelectionMode="None"
+                      HasUnevenRows="true"
+                      >
+             <ListView.ItemTemplate>
+             
+                    <DataTemplate>
+                        
+                <ViewCell>
+                  
+                 <Frame Padding="0"
+                        Margin="0,2,0,2"
+                        BorderColor="Gray"
+                        
+                      HasShadow="false">               
+                                
+                <Grid>
+                <Grid.RowDefinitions>
+                <RowDefinition Height="30"/>
+                </Grid.RowDefinitions>
+                 <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="60"/>
+                    <ColumnDefinition Width="100"/>
+                    <ColumnDefinition Width="100"/>
+                    <ColumnDefinition Width="80"/>
+                </Grid.ColumnDefinitions>
+                
+              <Label Text="{Binding SetNumber}" VerticalOptions="CenterAndExpand" BackgroundColor="Transparent"  HorizontalOptions="CenterAndExpand" VerticalTextAlignment="Center" Grid.Row="0" Grid.Column="0"/>
+              <Label Text="{Binding Value_1}" VerticalOptions="CenterAndExpand" BackgroundColor="Transparent" HorizontalOptions="CenterAndExpand" Grid.Row="0" Grid.Column="1"/>                  
+              <Label Text="{Binding Value_2}" VerticalOptions="CenterAndExpand" BackgroundColor="Transparent" HorizontalOptions="CenterAndExpand" Grid.Row="0" Grid.Column="2"/>                 
+             
+               <StackLayout Orientation="Horizontal" 
+                            BackgroundColor="Transparent" Margin="5,0,0,0" HorizontalOptions="EndAndExpand" Grid.Column="3" Grid.Row="0">
+               <Image Source="icon/edit.png"    WidthRequest="20">
+                    <Image.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="onclick_edit" NumberOfTapsRequired="1" />
+                            </Image.GestureRecognizers>                              
+               </Image>
+                                    
+               <Image Source="icon/delete.png" Margin="5,0,0,0" WidthRequest="20">
+                      <Image.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="onclick_delete" NumberOfTapsRequired="1" />
+                       </Image.GestureRecognizers>                               
+                </Image>
+             
+               </StackLayout>                 
+                            
+                            
+               </Grid>
+                        </Frame>    
+                       
+                  
+                            </ViewCell>
+                        
+                    </DataTemplate>
+                    
+             </ListView.ItemTemplate>
+                                
+                
+            </ListView>
+            
+            </StackLayout>
+            
+        </StackLayout>
+       
+     
+  </StackLayout>
+   
+</ContentPage>

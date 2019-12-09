@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             x:Class="Gymr.Views.ExerciseView">
+    <ContentPage.Content>
+        
+      <ScrollView>  
+    <Grid RowSpacing="0" Margin="10,45,10,40">
+    <Grid.RowDefinitions>
+        <RowDefinition Height="25"></RowDefinition>  
+        <RowDefinition Height="*"></RowDefinition>
+        <RowDefinition Height="40"></RowDefinition>
+    </Grid.RowDefinitions>     
+   
+            
+        <StackLayout Orientation="Horizontal" Grid.Row="0"
+                         Margin="0" BackgroundColor="Transparent">
+                        
+                        <Image Source="icon/left-arrow-blue.png"
+                               WidthRequest="25">
+                        <Image.GestureRecognizers>                                       
+                       <TapGestureRecognizer
+                        Tapped="OnImageNameTapped"
+                        NumberOfTapsRequired="1" />              
+                       </Image.GestureRecognizers>
+                        </Image>
+                       
+                        <Label Text="Ab Roller"
+                               TextColor="#3289C7"
+                               FontSize="15" 
+                               VerticalOptions="CenterAndExpand"
+                               FontAttributes="None"/>
+                        
+        </StackLayout>        
+                          
+      <StackLayout Orientation="Vertical" BackgroundColor="Transparent" Grid.Row="1">
+         
+         <Image Source="Exercises/ab-wheel.jpg" HorizontalOptions="Center" VerticalOptions="Center" WidthRequest="170"/>           
+         
+           <StackLayout Orientation="Vertical" Margin="10">         
+           <Label Text="Ab Roller Instruction" FontAttributes="Bold" FontSize="Large"/> 
+           <Label Text="1. Hold the Ab Roller with both hands and kneel on the floor." Font="15"/> 
+           <Label Text="2. Now place the ab roller on the floor in front of you so that you are on all your hands and knees (as in a kneeling push up position). This will be your starting position." Font="15"/>
+           <Label Text="3. Slowly roll the ab roller straight forward, stretching your body into a straight position. Tip: Go down as far as you can without touching the floor with your body. Breathe in during this portion of the movement." Font="15"/>
+           <Label Text="4. After a pause at the stretched position, start pulling yourself back to the starting position as you breathe out. Tip: Go slowly and keep your abs tight at all times." FontSize="15"/>
+           </StackLayout>
+      </StackLayout>
+                
+      <StackLayout Orientation="Vertical"
+                   BackgroundColor="Transparent" Margin="30,0,30,0"  Grid.Row="2">
+                    
+                 <Button Text="Add Exercise" 
+                     BackgroundColor="#00000000" 
+                     BorderRadius="4" 
+                     BorderColor="#356EB5" 
+                     BorderWidth="2" 
+                     WidthRequest="80"    
+                     Clicked="Handle_Clicked"
+                     FontAttributes="Bold"
+                     TextColor="#356EB5"    
+                   />    
+                
+                </StackLayout>          
+    </Grid>
+   </ScrollView>
+</ContentPage.Content>
+</ContentPage>

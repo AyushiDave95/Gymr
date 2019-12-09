@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:local="clr-namespace:Gymr" x:Class="Gymr.MainPage">
+    <StackLayout>
+        <!-- Place new controls here -->
+        <Label Text=" Application Landing Page Is Here" HorizontalOptions="Center" VerticalOptions="CenterAndExpand" />
+        
+        <Button Text="CLICK NEXT" HorizontalOptions="Center" Clicked="btn_onNextClick"/>
+       
+         <Button Text="LandingPage" Clicked="btn_LandingPage" />
+         <Button Text="ProfilePage" Clicked="btn_ProfilePage" />
+         <Button Text="ProfileInfo" Clicked="btn_ProfileInfo" />
+       
+    </StackLayout>
+</ContentPage>

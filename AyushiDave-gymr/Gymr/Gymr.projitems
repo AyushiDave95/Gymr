@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+    <HasSharedItems>true</HasSharedItems>
+    <SharedGUID>{BEE5C8EF-06A6-405F-A1F0-9E3FF1747A9B}</SharedGUID>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration">
+    <Import_RootNamespace>Gymr</Import_RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\App.xaml" />
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\MainPage.xaml" />
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\DashBoard.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\ExerciseList.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\Home.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\CalendarView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\GetStart.xaml" />
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\landingPage.xaml">
+   <SubType>Designer</SubType>    
+    <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+   </EmbeddedResource>
+
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\ExerciseDetail.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\ProfilePage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\ProfileInfo.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\ExerciseView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\StartWorkout.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\Landing.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\AddRoutine.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\RoutineExercise.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\PerfomRoutine.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)Views\App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Views\MainPage.xaml.cs">
+      <DependentUpon>MainPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Views\DashBoard.xaml.cs">
+      <DependentUpon>DashBoard.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Views\ExerciseList.xaml.cs">
+      <DependentUpon>ExerciseList.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Views\Home.xaml.cs">
+      <DependentUpon>Home.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Views\CalendarView.xaml.cs">
+      <DependentUpon>CalendarView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Views\GetStart.xaml.cs">
+      <DependentUpon>GetStart.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Views\landingPage.xaml.cs">
+      <DependentUpon>landingPage.xaml</DependentUpon>
+</Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Views\ExerciseDetail.xaml.cs">
+      <DependentUpon>ExerciseDetail.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Views\ProfilePage.xaml.cs">
+      <DependentUpon>ProfilePage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Views\ProfileInfo.xaml.cs">
+      <DependentUpon>ProfileInfo.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Template\CircleCountdown.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Views\ExerciseView.xaml.cs">
+      <DependentUpon>ExerciseView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Model\Exercise.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Template\ExerciseViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Views\CalendarVM.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Views\StartWorkout.xaml.cs">
+      <DependentUpon>StartWorkout.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Model\HomeExercise.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Template\HomeExerciseViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Views\Landing.xaml.cs">
+      <DependentUpon>Landing.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Model\DataLinkLayer.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Model\DbConnect.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Model\Profile.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Template\ExerciseListViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Template\ObservableGroupCollection.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Views\AddRoutine.xaml.cs">
+      <DependentUpon>AddRoutine.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Model\RoutineData.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Template\RoutineDataViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Model\NewRoutine.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Model\Routine.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Model\RoutineExecuted.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Model\RoutinePlanned.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Views\RoutineExercise.xaml.cs">
+      <DependentUpon>RoutineExercise.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Model\ExerciseSets.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Template\ExerciseSetsViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Views\PerfomRoutine.xaml.cs">
+      <DependentUpon>PerfomRoutine.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Model\MyExercises.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Template\MyExercisesViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Model\Dao.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Model\RoutineShow.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)BusinessLogic\BLPlanned.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Model\Planned.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)BusinessLogic\BLExercise.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)BusinessLogic\BLExerciseCategory.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)BusinessLogic\BLProfile.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)BusinessLogic\BLRoutine.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)BusinessLogic\BLRoutinePlanned.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Model\ExerciseCategory.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="$(MSBuildThisFileDirectory)Views\" />
+    <Folder Include="$(MSBuildThisFileDirectory)Model\" />
+    <Folder Include="$(MSBuildThisFileDirectory)Template\" />
+    <Folder Include="$(MSBuildThisFileDirectory)CustomeControl\" />
+    <Folder Include="$(MSBuildThisFileDirectory)BusinessLogic\" />
+  </ItemGroup>
+</Project>

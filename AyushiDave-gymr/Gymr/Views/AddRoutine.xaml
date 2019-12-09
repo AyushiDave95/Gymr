@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="Gymr.Views.AddRoutine">
+    <ContentPage.Content>
+        
+        
+        <StackLayout Orientation="Vertical">
+            
+            <StackLayout Orientation="Horizontal" Margin="0,25,0,0"  HeightRequest="50" BackgroundColor="Transparent">
+                
+                <Image Margin="10,0,0,0" Source="icon/left-arrow-blue.png" HeightRequest="25"  VerticalOptions="CenterAndExpand" HorizontalOptions="StartAndExpand" />            
+                 <Label Text="New Routine" TextColor="Teal" VerticalOptions="Center" HorizontalOptions="CenterAndExpand"/>
+                 <Button Text="Save" HorizontalOptions="EndAndExpand" Margin="0,0,10,0"/>
+                
+            </StackLayout>
+            
+            <StackLayout Orientation="Vertical">
+                
+               <Entry  x:Name="entry_routine" Placeholder="Routine Name" Margin="20,0,20,0"/>
+                
+                <ListView
+                x:Name="exerciseList"
+                SeparatorColor="Gray"
+                RowHeight="50"
+                >
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                      <ViewCell>
+                        <StackLayout Orientation="Vertical" HeightRequest="20">
+                            <Label Text="{Binding Name}"/>
+                            <Label x:Name="lbl_item1" Text="{Binding Label_F}"/>
+                            <Label x:Name="lbl_item2" Text="{Binding }"/>        
+                        </StackLayout>        
+                      </ViewCell>      
+                    </DataTemplate>    
+                 </ListView.ItemTemplate>
+                
+            </ListView>
+                
+               <Button Text="Add Exercise" 
+                     BackgroundColor="#00000000" 
+                     BorderRadius="4" 
+                     Margin="15,10,15,20"
+                     BorderColor="#356EB5" 
+                     BorderWidth="2" 
+                     WidthRequest="50"  
+                     Clicked="addExerciseClick"
+                     HeightRequest="40"  
+                     FontAttributes="Bold"
+                     TextColor="#356EB5"    
+                   />    
+                  
+                
+            </StackLayout>
+            
+         
+            
+        </StackLayout>
+        
+    </ContentPage.Content>
+</ContentPage>

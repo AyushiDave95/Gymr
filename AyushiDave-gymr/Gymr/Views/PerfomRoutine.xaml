@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             x:Class="Gymr.Views.PerfomRoutine">
+         
+        <StackLayout Orientation="Vertical">
+       
+        <Grid HeightRequest="450">
+            
+             <Image Source="exercise.jpeg" 
+                       HorizontalOptions="FillAndExpand"
+                       VerticalOptions="FillAndExpand" 
+                       Aspect="Fill" />
+            
+            <StackLayout Orientation="Vertical"
+                         BackgroundColor="#44000000">
+                  <StackLayout Orientation="Horizontal" Margin="0,30,0,0" BackgroundColor="Transparent">
+                        <Image Source="icon/back.png" 
+                               HeightRequest="25" 
+                               WidthRequest="25" 
+                               HorizontalOptions="Start">
+                            <Image.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="OnTapped" NumberOfTapsRequired="1" />
+                            </Image.GestureRecognizers>
+                        </Image>
+                    </StackLayout>
+                
+                 <Grid HorizontalOptions="CenterAndExpand" RowSpacing="0" WidthRequest="180">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition />
+                            <ColumnDefinition Width="Auto" />
+                            <ColumnDefinition />
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto" />
+                        </Grid.RowDefinitions>
+                        <Label Grid.Column="0" Grid.Row="0" FontAttributes="Bold" Text="45" TextColor="White" FontSize="45" HorizontalOptions="CenterAndExpand" />
+                        <Label Grid.Column="0" Grid.Row="1" FontAttributes="Bold" Text="Min" TextColor="White" HorizontalOptions="CenterAndExpand" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" />
+                        <Label Grid.Column="1" Grid.Row="0" Text=":" TextColor="White" FontSize="45" HorizontalOptions="CenterAndExpand" />
+                        <Label Grid.Column="2" Grid.Row="0" FontAttributes="Bold" Text="25" TextColor="White" FontSize="40" HorizontalOptions="CenterAndExpand" />
+                        <Label Grid.Column="2" Grid.Row="1" TextColor="White" HorizontalOptions="CenterAndExpand" FontAttributes="Bold" Text="Sec" />
+                    </Grid>
+                   
+                  <AbsoluteLayout x:Name="ViewControls" 
+                                    VerticalOptions="CenterAndExpand" 
+                                    HorizontalOptions="CenterAndExpand" 
+                                    AbsoluteLayout.LayoutBounds="1,1,1,.50"
+                                    AbsoluteLayout.LayoutFlags="All" 
+                                    Margin="0">
+                        <StackLayout Orientation="Vertical" Margin="10,0,10,10" BackgroundColor="Transparent" AbsoluteLayout.LayoutFlags="All" AbsoluteLayout.LayoutBounds="1,1,1,1">
+                            <Grid Margin="5" HorizontalOptions="Center">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="40" />
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="110" />
+                                    <ColumnDefinition Width="110" />
+                                    <ColumnDefinition Width="110" />
+                                </Grid.ColumnDefinitions>
+                                <Button Text="Start" BackgroundColor="#00000000" BorderRadius="4" BorderColor="White" BorderWidth="2" Clicked="OnTapped" FontAttributes="Bold" TextColor="White" HorizontalOptions="FillAndExpand" Grid.Column="0" />
+                                <Button Text="Stop" BackgroundColor="#00000000" BorderRadius="4" BorderColor="White" BorderWidth="2" FontAttributes="Bold" TextColor="White" HorizontalOptions="FillAndExpand" Grid.Column="1" />
+                                <Button Text="Cancel" BackgroundColor="#00000000" BorderRadius="4" BorderColor="White" BorderWidth="2" FontAttributes="Bold" TextColor="White" HorizontalOptions="FillAndExpand" Grid.Column="2" />
+                            </Grid>
+                        </StackLayout>
+                    </AbsoluteLayout>
+                  
+                
+            </StackLayout>
+            
+        </Grid>
+        
+        <StackLayout Orientation="Vertical" Margin="0,0,0,0"  BackgroundColor="Transparent">
+            
+            <Grid Margin="2">
+                <Grid.RowDefinitions>
+                     <RowDefinition Height="30" />
+                    
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="110"/>
+                    <ColumnDefinition Width="110"/>
+                    <ColumnDefinition Width="110"/>
+                   
+                </Grid.ColumnDefinitions>
+                
+                <Label Text="Sets" Grid.Row="0" 
+                       FontAttributes="Bold"  Grid.Column="0" 
+                       HorizontalOptions="Center" VerticalOptions="Center"/>
+                 <Label Text="lbs" Grid.Row="0" FontAttributes="Bold" Grid.Column="1" HorizontalOptions="Center" VerticalOptions="Center"/>
+                <Label Text="Reps" Grid.Row="0" FontAttributes="Bold" Grid.Column="2" HorizontalOptions="Center" VerticalOptions="Center"/>
+               
+                
+                
+            </Grid>
+            
+            <StackLayout Orientation="Vertical">
+            
+            <ListView x:Name="list_exerciseSet"
+                      SeparatorColor="Transparent"
+                      Margin="3,0,3,0"
+                      RowHeight="35"
+                      SelectionMode="None"
+                      HasUnevenRows="true"
+                      >
+             <ListView.ItemTemplate>
+             
+                    <DataTemplate>
+                        
+                <ViewCell>
+                  
+                 <Frame Padding="0"
+                        Margin="2"
+                        BorderColor="Gray"
+                        
+                      HasShadow="false">               
+                                
+                <Grid>
+                <Grid.RowDefinitions>
+                <RowDefinition Height="30"/>
+                </Grid.RowDefinitions>
+                 <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="110"/>
+                    <ColumnDefinition Width="110"/>
+                    <ColumnDefinition Width="110"/>
+                   
+                </Grid.ColumnDefinitions>
+                
+              <Label Text="{Binding SetNumber}" VerticalOptions="Center" 
+                     BackgroundColor="Transparent"  HorizontalOptions="Center" 
+                     VerticalTextAlignment="Center" Grid.Row="0" Grid.Column="0"/>
+              <Label Text="{Binding Value_1}" VerticalOptions="Center" BackgroundColor="Transparent" HorizontalOptions="Center" Grid.Row="0" Grid.Column="1"/>                  
+              <Label Text="{Binding Value_2}" VerticalOptions="Center" BackgroundColor="Transparent" HorizontalOptions="Center" Grid.Row="0" Grid.Column="2"/>                 
+             
+                            
+               </Grid>
+            </Frame>    
+                       
+                  
+                            </ViewCell>
+                        
+                    </DataTemplate>
+                    
+             </ListView.ItemTemplate>
+                                
+                
+            </ListView>
+            
+            </StackLayout>
+            
+        </StackLayout>
+        
+        <!--   Third Start          -->
+            <StackLayout Orientation="Vertical" 
+                         BackgroundColor="Transparent"
+                         Margin="5,10,5,25">
+                
+                <Grid Margin="0" HorizontalOptions="CenterAndExpand" 
+                      VerticalOptions="CenterAndExpand">
+                    
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="45"></RowDefinition>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="110"/>
+                        <ColumnDefinition Width="110"/>
+                         <ColumnDefinition Width="110"/>
+                    </Grid.ColumnDefinitions>
+                    
+                    <Button Text="Start" BackgroundColor="#00000000" 
+                     BorderRadius="4" 
+                     BorderColor="#356EB5" 
+                     BorderWidth="2" 
+                     Clicked="onStatClick"
+                     FontAttributes="Bold"
+                     TextColor="#356EB5"
+                     HorizontalOptions="FillAndExpand"  Grid.Column="0"/>
+          
+                 <Button Text="Stop" BackgroundColor="#00000000" 
+                     BorderRadius="4" 
+                     BorderColor="#356EB5" 
+                     BorderWidth="2" 
+                     FontAttributes="Bold"
+                     TextColor="#356EB5"
+                         Clicked="onstopClick"
+                     HorizontalOptions="FillAndExpand"  Grid.Column="1"/>
+                    
+                     <Button Text="Done" BackgroundColor="#00000000" 
+                     BorderRadius="4" 
+                     BorderColor="#356EB5" 
+                     BorderWidth="2" 
+                     Clicked="onSaveClick"
+                     FontAttributes="Bold"
+                     TextColor="#356EB5"
+                     HorizontalOptions="FillAndExpand"  Grid.Column="2"/>
+            
+                    
+                </Grid>
+                
+            </StackLayout>
+            
+            
+<!--    Third End        -->
+       
+     
+  </StackLayout>            
+    
+            
+</ContentPage>

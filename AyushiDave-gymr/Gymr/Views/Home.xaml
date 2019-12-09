@@ -1,0 +1,359 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             x:Class="Gymr.Views.Home">
+      
+    <StackLayout Orientation="Horizontal" 
+                 BackgroundColor="Teal"
+                 HeightRequest="40" Margin="2,2,2,2">
+   
+    <Label Margin="0,0,0,0"  Text="Gymr jsdfdf" FontAttributes="Bold" 
+          
+           FontSize="Large" TextColor="#356EB5"/>
+                
+    </StackLayout>
+        <Grid ColumnSpacing="0" Margin="0,25,0,10" RowSpacing="0">
+
+    <ScrollView >    
+    <Grid ColumnSpacing="0" Margin="7,25,7,10" RowSpacing="0">
+    
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>           
+         </Grid.RowDefinitions>
+  
+<!--      Start Top      -->
+    <StackLayout Orientation="Horizontal" Grid.Row="0" BackgroundColor="Transparent" VerticalOptions="Start" HeightRequest="40" Margin="2,2,2,2">
+        <Label Margin="10,0,0,0" Text="Today's Workout" FontAttributes="Bold" HorizontalOptions="CenterAndExpand" VerticalOptions="Center" FontSize="Large" TextColor="#356EB5"/>
+        <Image Source="user.png" HorizontalOptions="Center" Margin="5,5,5,5"/>            
+    </StackLayout>
+             
+<!--    End Top        -->
+        
+<!--    Start Bottom    -->
+        
+        
+        <StackLayout Orientation="Vertical" Grid.Row="1"  HorizontalOptions="CenterAndExpand">
+            
+<!--      Single Exercise view Start      -->
+     
+                
+    <Grid RowSpacing="0">
+    <Grid.RowDefinitions>
+        <RowDefinition Height="150"></RowDefinition>       
+    </Grid.RowDefinitions>
+
+    <Image Grid.Row="0" Grid.Column="0"
+           Source="barbell.jpeg"
+           HorizontalOptions="FillAndExpand"
+           VerticalOptions="FillAndExpand" 
+           Aspect="Fill" />
+  
+     <StackLayout Grid.Row="0" Orientation="Vertical" Grid.Column="0">           
+                
+    <Label Margin="2,2,2,2"
+           Text="BarBell" 
+           HorizontalOptions="Center"
+           HorizontalTextAlignment="Start"
+           VerticalTextAlignment="Center"
+           TextColor="White" 
+           FontFamily="San Francisco"
+           FontAttributes="Bold"
+           FontSize="28"/>
+    
+     <StackLayout VerticalOptions="EndAndExpand"  Orientation="Horizontal" Margin="2,2,2,2">
+                        
+      <StackLayout Margin="5,5,5,5" WidthRequest="200"  Orientation="Vertical">
+        
+          <Label 
+           Text="20 mins left" 
+           HorizontalOptions="StartAndExpand"
+           HorizontalTextAlignment="Start"
+           VerticalTextAlignment="Center"
+           TextColor="White" 
+           FontFamily="San Francisco"
+           FontAttributes="Bold"
+           FontSize="Default"/>  
+                            
+          <Label 
+           Text="23% complete" 
+           HorizontalOptions="StartAndExpand"
+           HorizontalTextAlignment="Start"
+           VerticalTextAlignment="Center"
+           TextColor="White" 
+           FontFamily="San Francisco"
+           FontAttributes="Bold"
+           FontSize="Default"/> 
+                            
+       </StackLayout>  
+           
+        <StackLayout Orientation="Vertical" Margin="5,5,15,5" VerticalOptions="Center" HorizontalOptions="EndAndExpand">
+                <Image Source="play-button.png" VerticalOptions="Center" HeightRequest="40" HorizontalOptions="StartAndExpand"/>
+         <StackLayout Orientation="Vertical" 
+                      Margin="5,5,15,5"
+                      VerticalOptions="Center" 
+                      HorizontalOptions="EndAndExpand">
+               
+                      <Image Source="play-button.png"
+                       VerticalOptions="Center"
+                       HeightRequest="40" 
+                       HorizontalOptions="StartAndExpand">
+                 
+                       <Image.GestureRecognizers>                                       
+                       <TapGestureRecognizer
+                        Tapped="OnImageNameTapped"
+                        NumberOfTapsRequired="1" />              
+                       </Image.GestureRecognizers>           
+                                    
+                 </Image>
+         </StackLayout>               
+                       
+    </StackLayout>
+                
+   </StackLayout> 
+       
+            </StackLayout>
+       </Grid>
+            
+<!--    Single Exercise view End        -->
+       
+            
+<!--  2 View          -->
+  
+      <Grid RowSpacing="0">
+    <Grid.RowDefinitions>
+        <RowDefinition Height="150"></RowDefinition>       
+    </Grid.RowDefinitions>
+
+    <Image Grid.Row="0" Grid.Column="0"
+           Source="exercise.jpeg"
+           HorizontalOptions="FillAndExpand"
+           VerticalOptions="FillAndExpand" 
+           Aspect="Fill" />
+  
+     <StackLayout Grid.Row="0" Orientation="Vertical" Grid.Column="0">           
+                
+    <Label Margin="2,2,2,2"
+           Text="Workout" 
+           HorizontalOptions="Center"
+           HorizontalTextAlignment="Start"
+           VerticalTextAlignment="Center"
+           TextColor="White" 
+           FontFamily="San Francisco"
+           FontAttributes="Bold"
+           FontSize="28"/>
+    
+     <StackLayout VerticalOptions="EndAndExpand"  Orientation="Horizontal" Margin="2,2,2,2">
+                        
+      <StackLayout Margin="5,5,5,5" WidthRequest="200"  Orientation="Vertical">
+        
+          <Label 
+           Text="05 mins left" 
+           HorizontalOptions="StartAndExpand"
+           HorizontalTextAlignment="Start"
+           VerticalTextAlignment="Center"
+           TextColor="White" 
+           FontFamily="San Francisco"
+           FontAttributes="Bold"
+           FontSize="Default"/>  
+                            
+          <Label 
+           Text="96% complete" 
+           HorizontalOptions="StartAndExpand"
+           HorizontalTextAlignment="Start"
+           VerticalTextAlignment="Center"
+           TextColor="White" 
+           FontFamily="San Francisco"
+           FontAttributes="Bold"
+           FontSize="Default"/> 
+                            
+       </StackLayout>  
+           
+         <StackLayout Orientation="Vertical" Margin="5,5,15,5" VerticalOptions="Center" HorizontalOptions="EndAndExpand">
+                <Image Source="play-button.png" VerticalOptions="Center" HeightRequest="40" HorizontalOptions="StartAndExpand"/>
+         </StackLayout>               
+                       
+    </StackLayout>
+                
+   </StackLayout> 
+       
+            
+       </Grid>
+
+        <!--  3 View          -->
+  
+      <Grid RowSpacing="0">
+    <Grid.RowDefinitions>
+        <RowDefinition Height="100"></RowDefinition>       
+    </Grid.RowDefinitions>
+
+    <Image Grid.Row="0" Grid.Column="0"
+           Source="foot.jpeg"
+           HorizontalOptions="FillAndExpand"
+           VerticalOptions="FillAndExpand" 
+           Aspect="Fill" />
+  
+     <StackLayout Grid.Row="0" Orientation="Vertical" Grid.Column="0">           
+                
+    <Label Margin="2,2,2,2"
+           Text="Running" 
+           HorizontalOptions="Center"
+           HorizontalTextAlignment="Start"
+           VerticalTextAlignment="Center"
+           TextColor="White" 
+           FontFamily="San Francisco"
+           FontAttributes="Bold"
+           FontSize="28"/>
+    
+     <StackLayout VerticalOptions="EndAndExpand"  Orientation="Horizontal" Margin="2,2,2,2">
+                        
+      <StackLayout Margin="5,5,5,5" WidthRequest="200"  Orientation="Vertical">
+        
+          <Label 
+           Text="65 mins left" 
+           HorizontalOptions="StartAndExpand"
+           HorizontalTextAlignment="Start"
+           VerticalTextAlignment="Center"
+           TextColor="White" 
+           FontFamily="San Francisco"
+           FontAttributes="Bold"
+           FontSize="Default"/>  
+                            
+          <Label 
+           Text="06% complete" 
+           HorizontalOptions="StartAndExpand"
+           HorizontalTextAlignment="Start"
+           VerticalTextAlignment="Center"
+           TextColor="White" 
+           FontFamily="San Francisco"
+           FontAttributes="Bold"
+           FontSize="Default"/> 
+                            
+       </StackLayout>  
+           
+         <StackLayout Orientation="Vertical" Margin="5,5,15,5" VerticalOptions="Center" HorizontalOptions="EndAndExpand">
+                <Image Source="play-button.png" VerticalOptions="Center" HeightRequest="40" HorizontalOptions="StartAndExpand"/>
+         </StackLayout>               
+                       
+    </StackLayout>
+                
+   </StackLayout> 
+       
+            
+       </Grid>
+    
+            
+              <!--  3 View          -->
+   
+     <Frame    Padding="5"
+               Margin="5"
+               BackgroundColor="Teal"
+               OutlineColor="Teal"
+               CornerRadius="5"
+               HeightRequest="55">
+                        
+   <StackLayout Orientation="Vertical"
+                >           
+                
+    <Label Margin="0"
+           Text="Hello" 
+           HorizontalOptions="Center"
+           HorizontalTextAlignment="Start"
+           VerticalTextAlignment="Center"
+           TextColor="White" 
+           FontFamily="San Francisco"
+           FontAttributes="Bold"
+           FontSize="24"/>
+    
+     <StackLayout VerticalOptions="EndAndExpand"
+                  Orientation="Horizontal" 
+                  Margin="5,5,5,5"
+                  >
+                           
+          <Label 
+           Text="Today, Duration:10 mins" 
+           HorizontalTextAlignment="Start"
+           TextColor="White" 
+           FontFamily="San Francisco"
+           FontAttributes="Bold"
+           FontSize="Small"/>  
+             
+                            
+          <Label 
+           Text="45% Complete"        
+           TextColor="White" 
+           HorizontalOptions="EndAndExpand"
+           HorizontalTextAlignment="End"
+           FontFamily="San Francisco"
+           FontAttributes="Bold"
+           FontSize="Small"/> 
+                           
+    </StackLayout>
+                
+   </StackLayout> 
+      
+   </Frame>            
+                
+    <Grid RowSpacing="0" Margin="0,0,0,0">
+      
+     <StackLayout  BackgroundColor="Red" Orientation="Vertical">           
+                
+    <Label Margin="0"
+           Text="Lifting BarBell" 
+           HorizontalOptions="Center"
+           HorizontalTextAlignment="Start"
+           VerticalTextAlignment="Center"
+           TextColor="White" 
+           FontFamily="San Francisco"
+           FontAttributes="Bold"
+           FontSize="28"/>
+    
+     <StackLayout VerticalOptions="EndAndExpand"  Orientation="Horizontal" Margin="2,2,2,2">
+                        
+      <StackLayout Margin="5,5,5,5" WidthRequest="200"  Orientation="Vertical">
+        
+          <Label 
+           Text="10 mins left" 
+           HorizontalOptions="StartAndExpand"
+           HorizontalTextAlignment="Start"
+           VerticalTextAlignment="Center"
+           TextColor="White" 
+           FontFamily="San Francisco"
+           FontAttributes="Bold"
+           FontSize="Default"/>  
+                            
+          <Label 
+           Text="76% complete" 
+           HorizontalOptions="StartAndExpand"
+           HorizontalTextAlignment="Start"
+           VerticalTextAlignment="Center"
+           TextColor="White" 
+           FontFamily="San Francisco"
+           FontAttributes="Bold"
+           FontSize="Default"/> 
+                            
+       </StackLayout>  
+           
+                     
+                       
+    </StackLayout>
+                
+   </StackLayout> 
+       
+            
+       </Grid>
+   
+     
+        </StackLayout>  
+             
+<!--    End Bottom    -->
+
+    
+    </Grid>
+        
+   </ScrollView>
+  
+  </Grid>
+       
+ </ContentPage>
+

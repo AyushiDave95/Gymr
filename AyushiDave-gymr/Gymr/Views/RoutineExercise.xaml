@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             x:Class="Gymr.Views.RoutineExercise">
+  
+    <ContentPage.Content>
+        
+   <StackLayout Orientation="Vertical">
+             
+            
+            <StackLayout Orientation="Horizontal"
+                         Margin="0,35,0,0"  HeightRequest="50" BackgroundColor="Transparent">
+                
+                 <Image Margin="10,0,0,0" Source="icon/left-arrow-blue.png" 
+                        HeightRequest="25"  
+                        VerticalOptions="CenterAndExpand"
+                        HorizontalOptions="Start">
+                   
+                    <Image.GestureRecognizers>                                       
+                       <TapGestureRecognizer
+                        Tapped="onBackClick"
+                        NumberOfTapsRequired="1" />              
+                       </Image.GestureRecognizers> 
+                    
+                    </Image>
+              
+                  <Label Text="New Routine" 
+                         x:Name="lbl_routine" 
+                         TextColor="Teal"
+                         Margin="0,0,20,0"
+                         VerticalOptions="Center" 
+                         HorizontalOptions="CenterAndExpand"
+                         />
+                
+            </StackLayout>
+    
+    <StackLayout Orientation="Horizontal">
+      <Entry  x:Name="entry_routine"
+              VerticalOptions="CenterAndExpand" 
+              HorizontalOptions="Start"
+              WidthRequest="290"
+              Placeholder="Routine Name" 
+              Margin="15,0,15,0"/>
+        <Button Text="Save" Margin="0,0,15,0" Clicked="onbtn_saveClick" />    
+                
+     </StackLayout>        
+     
+            
+            
+        <Button Text="Add Exercise" 
+                BackgroundColor="Teal"
+                TextColor="White" 
+                Clicked="onAddexercise"
+                FontAttributes="None"
+                HorizontalOptions="Center"
+                WidthRequest="230" FontSize="20"
+                Margin="0,10,0,0"/>
+                          
+            
+   <ListView x:Name="list_routineExercise"
+                HasUnevenRows="true"
+                Margin="15,5,15,5"
+                ItemTapped="Handle_ItemTapped"
+                SeparatorColor="Transparent"
+                RowHeight="100" >
+                    
+    <ListView.ItemTemplate>
+                            
+    <DataTemplate>
+   <ViewCell>
+     
+        <Frame Padding="5"
+               Margin="2"
+               HasShadow="false"
+               BackgroundColor="Transparent"
+               OutlineColor="Teal"
+               CornerRadius="3"
+               >
+       <StackLayout Orientation="Horizontal" BackgroundColor="Transparent">
+            
+             <Image Source="{Binding ImageURL}" Margin="5,5,5,5" WidthRequest="55"  />  
+             <StackLayout Orientation="Vertical" VerticalOptions="CenterAndExpand">
+                 <Label Text="{Binding ExcerciseName}" x:Name="lbl_Name" Margin="3,5,0,0" FontSize="17" VerticalOptions="CenterAndExpand" TextColor="Teal"/>
+                 <Label Text="{Binding Time}" x:Name="lbl_time" Margin="3,0,0,5" TextColor="Gray" /> 
+              </StackLayout> 
+             <Image Margin="10,0,10,0" Source="icon/right-arrow.png" 
+                        HeightRequest="28"  
+                        VerticalOptions="CenterAndExpand" 
+                        HorizontalOptions="EndAndExpand">
+                    <Image.GestureRecognizers>                                       
+                       <TapGestureRecognizer
+                        Tapped="onBackClick"
+                        NumberOfTapsRequired="1" />              
+                       </Image.GestureRecognizers> 
+                    
+                    </Image>
+   </StackLayout> 
+      
+   </Frame>            
+     
+   
+      </ViewCell>             
+     </DataTemplate>           
+                             
+                            
+   </ListView.ItemTemplate>
+                
+                </ListView>
+            
+      
+            
+            
+     </StackLayout>
+        
+    </ContentPage.Content>
+    
+    
+</ContentPage>

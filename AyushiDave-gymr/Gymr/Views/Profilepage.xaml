@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+              xmlns:c="clr-namespace:ImageCircle.Forms.Plugin.Abstractions;assembly=ImageCircle.Forms.Plugin"
+             x:Class="Gymr.Views.ProfilePage">
+   <Grid>
+      <StackLayout Orientation="Vertical"  >
+           
+            <StackLayout HeightRequest="250" 
+                         BackgroundColor="Teal" 
+                         Padding="00,20,0,0"
+                         Margin="0">
+                <!-- <Image Source="profile.png" WidthRequest="200" HeightRequest="200" ></Image>-->
+                  <c:CircleImage Source="profileblank" 
+                                 WidthRequest="150" 
+                                 HeightRequest="150" 
+                                 BorderThickness="4" 
+                                 BorderColor="White"
+                                 Aspect="AspectFill"
+                                 Margin="0,40,0,0"
+                                 HorizontalOptions="Center">
+                    
+                </c:CircleImage> 
+                
+                <Label Text="Hi JEFF!" x:Name="Name" VerticalOptions="Center" HorizontalOptions="Center" Margin="0,10,0,0" FontSize="25" TextColor="White"></Label>
+            </StackLayout>
+             <StackLayout VerticalOptions="Center">
+            <StackLayout Orientation="Horizontal" Margin="40,15,0,0" VerticalOptions="Center">
+              <Label Text=" DOB" FontSize="20"></Label> 
+                <DatePicker x:Name="dob" MaximumDate="2020/12/31" MinimumDate="1980/12/31" Format="yyyy/mm/dd" WidthRequest="150" Margin="40,0,0,0"></DatePicker>
+            </StackLayout>
+       
+           <StackLayout Orientation="Horizontal" Margin="40,15,0,0">
+              <Label Text="HEIGHT"></Label> 
+              <Entry Text="" Keyboard="Numeric" x:Name="txt_height"  Margin="23,0,0,0" WidthRequest="150"></Entry>
+            </StackLayout>
+           <StackLayout Orientation="Horizontal" Margin="40,15,0,0">
+              <Label Text="WEIGHT"></Label> 
+              <Entry Text="" Keyboard="Numeric" x:Name="txt_weight"  Margin="22,0,0,0" WidthRequest="150" ></Entry>
+            </StackLayout>
+           <StackLayout Orientation="Horizontal" Margin="40,15,0,0">
+              <Label Text="GENDER"></Label> 
+              <!--<Entry Text="" x:Name="txt_gender" ></Entry>-->
+                <Picker x:Name="gender" Title="Select Gender" Margin="22,0,0,0" WidthRequest="150">
+                    <Picker.ItemsSource>
+                        <x:Array Type="{x:Type x:String}">
+                            <x:String>Male</x:String>
+                            <x:String>Female</x:String>
+                            <x:String>Not Interested</x:String>
+                        </x:Array>
+                    </Picker.ItemsSource>
+                </Picker>
+            </StackLayout>
+          <StackLayout Orientation="Horizontal" Margin="40,15,0,0">
+              <Label Text="MATRIX"></Label> 
+              <!--<Entry Text="" x:Name="txt_matrix" ></Entry>-->
+                <Picker x:Name="matrix" Title="Select Matrix" Margin="22,0,0,0" WidthRequest="150" >
+                    <Picker.ItemsSource>
+                        <x:Array Type="{x:Type x:String}">
+                            <x:String>lbs</x:String>
+                            <x:String>kg</x:String>
+                       </x:Array>
+                    </Picker.ItemsSource>
+                </Picker>
+            </StackLayout>
+     
+         <StackLayout >
+              <Button Text=" SAVE"
+                      Clicked="Handle_Clicked"
+                      BackgroundColor="Teal" 
+                      TextColor="White" HorizontalOptions="Center" 
+                      WidthRequest="300" FontSize="20" Margin="20,65,0,0"></Button>
+         </StackLayout>
+     
+        </StackLayout>
+        
+        
+        </StackLayout>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        </Grid>
+</ContentPage>

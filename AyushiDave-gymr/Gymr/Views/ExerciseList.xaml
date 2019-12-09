@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             x:Class="Gymr.Views.Exercise">
+ 
+    <ContentPage.Content>
+      
+    <Grid ColumnSpacing="0" Margin="3,25,3,10" RowSpacing="0">
+    
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+             <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>           
+         </Grid.RowDefinitions>
+  
+<!--      Start Top      -->
+    <StackLayout Orientation="Horizontal" Grid.Row="0" BackgroundColor="Transparent" VerticalOptions="Start" HeightRequest="40" Margin="2,2,2,2">
+       
+    <Label Margin="0,0,0,0"  Text="Exercises" FontAttributes="Bold" HorizontalOptions="CenterAndExpand" VerticalOptions="Center" FontSize="Large" TextColor="#356EB5"/>
+   
+    <Button Text="Save" HorizontalOptions="End" IsVisible="true" VerticalOptions="EndAndExpand" Margin="0,0,5,0" Clicked="btnSaveClicked" x:Name="btn_save"/>
+                
+   </StackLayout>
+ 
+<!--     End Top          -->
+                
+                
+<!--     Start Middle     -->
+      
+   
+<StackLayout Orientation="Horizontal" Margin="2" Grid.Row="1" >
+                    
+   <Picker x:Name="picker_body" TextColor="White" HorizontalOptions="CenterAndExpand" WidthRequest="160" Title="Body Part">
+                        
+  <Picker.ItemsSource>
+    <x:Array Type="{x:Type x:String}">
+      <x:String>Core</x:String>
+      <x:String>Arms</x:String>
+      <x:String>Back</x:String>
+      <x:String>Chest</x:String>
+      <x:String>Legs</x:String>
+      <x:String>Shoulders</x:String>
+      <x:String>Full Body</x:String>
+      <x:String>Other</x:String>                               
+    </x:Array>
+  </Picker.ItemsSource>
+
+</Picker>
+                    
+                    
+   <Picker x:Name="picker_Cat" HorizontalOptions="CenterAndExpand" WidthRequest="160" Title="Category">
+                        
+  <Picker.ItemsSource>
+    <x:Array Type="{x:Type x:String}">
+      <x:String>Barbell</x:String>
+      <x:String>Dumbbell</x:String>
+      <x:String>Machine / Other</x:String>
+      <x:String>Weighted Bodyweight</x:String>
+      <x:String>Assisted BodyWeight</x:String>
+      <x:String>Reps Only</x:String>
+      <x:String>Cardio</x:String>
+      <x:String>Duration</x:String>                               
+    </x:Array>
+  </Picker.ItemsSource>
+
+</Picker>
+
+  </StackLayout>     
+<!--     End Middle           -->
+                
+                
+<!-- Start Bottom  -->
+                
+  <StackLayout Grid.Row="2" Margin="0,5,10,5" Orientation="Vertical">
+    
+      <ListView x:Name="exerciselist"
+                ItemTapped="Handle_ItemTapped"
+                IsGroupingEnabled="true"
+                HasUnevenRows="true"
+                SelectionMode="Single"
+                ItemSelected="Handle_ItemSelected"
+                SeparatorColor="Transparent"
+                GroupDisplayBinding="{Binding Key}"               
+                RowHeight="55">
+      <ListView.ItemTemplate>
+                            
+       <DataTemplate>
+<!--      <TextCell Text="{Binding Name}" TextColor="Teal"-->
+<!--                 Detail="{Binding BodyType}" DetailColor="Gray" />                         -->
+                          
+         <ViewCell>
+                 <ViewCell.View>
+                      <StackLayout Orientation="Horizontal" BackgroundColor="Transparent">
+                          <Image Source="{Binding ImageURL}" Margin="8,5,5,5" WidthRequest="47"  />  
+                          <StackLayout Orientation="Vertical" VerticalOptions="CenterAndExpand">
+                                    <Label Text="{Binding Name}" x:Name="lblName" Margin="3,5,0,0" FontSize="17" VerticalOptions="CenterAndExpand" TextColor="Teal"/>
+                                    <Label Text="{Binding BodyType}" x:Name="lblBodyType" Margin="3,0,0,7" TextColor="Gray" />        
+                        </StackLayout>              
+                     </StackLayout>              
+                </ViewCell.View>               
+        </ViewCell>                   
+                            
+       </DataTemplate>                  
+                            
+   </ListView.ItemTemplate>                  
+                        
+   </ListView>
+   
+ </StackLayout>              
+                
+<!--  End Bottom -->
+                
+</Grid>
+      
+</ContentPage.Content>
+    
+</ContentPage>

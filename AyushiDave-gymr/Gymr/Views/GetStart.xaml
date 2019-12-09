@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="Gymr.Views.GetStart">
+   
+    
+        
+     <StackLayout Orientation="Vertical" Margin="1,35,1,35"> 
+        
+<!--      Start First      -->
+     
+  <StackLayout Orientation="Horizontal" BackgroundColor="Transparent" VerticalOptions="Start" HeightRequest="40" Margin="2,2,2,2">
+        <Label Margin="40,0,0,0"  Text="Get Start" FontAttributes="Bold" HorizontalOptions="CenterAndExpand" VerticalOptions="Center" FontSize="Large" TextColor="#356EB5"/>
+        <Image Source="user.png" HorizontalOptions="Center" Margin="0,5,5,5"/>            
+    </StackLayout>
+        
+    
+        
+<!--    End Start        -->
+    
+<!--    Start    Center    -->
+         <StackLayout Orientation="Vertical"   Margin="5,5,5,5" VerticalOptions="CenterAndExpand">
+         
+         <Image Source="running.png" HeightRequest="150" WidthRequest="150"  HorizontalOptions="Center" VerticalOptions="Center"/>
+     
+        <Label 
+                FontAttributes="Bold"
+                Margin="5,10,5,5"
+                FlowDirection="LeftToRight"
+                LineBreakMode="WordWrap"
+                TextColor="#28548a" 
+                HorizontalOptions="CenterAndExpand" 
+                VerticalOptions="Center"
+                FontSize="Small">
+                
+                <Label.Text>Fitness is important in sport, but of at least
+                equal importance are skills.
+                </Label.Text>
+                
+
+                </Label>
+            
+            
+        </StackLayout> 
+         
+        
+        
+<!--     End Center       -->
+            
+            
+<!--  Start Bottom          -->
+          <StackLayout Orientation="Vertical"  VerticalOptions="End">
+                
+                  <StackLayout Orientation="Horizontal" VerticalOptions="Center"  HeightRequest="45" BackgroundColor="#356EB5">
+               
+                    <Label Text="Add a Workout" Margin="40,0,0,0"  HorizontalOptions="CenterAndExpand" VerticalOptions="Center" TextColor="White"/>
+                    <Image Source="right-arrow" Margin="0,2,5,2" HeightRequest="25" />
+             
+                </StackLayout>
+                
+             <StackLayout Orientation="Horizontal" VerticalOptions="Center"  HeightRequest="45" BackgroundColor="#356EB5">
+               
+                    <Label Text="Workout Tour" Margin="40,0,0,0" HorizontalOptions="CenterAndExpand" VerticalOptions="Center" TextColor="White"/>
+                    <Image Source="right-arrow" Margin="0,2,5,2" HeightRequest="25"/>
+             
+                </StackLayout>
+            
+           
+            </StackLayout>
+            
+<!--    Start end        -->
+            
+     
+      </StackLayout>  
+        
+    </ContentPage>

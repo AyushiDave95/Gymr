@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             x:Class="Gymr.Views.Landing" >
+     <Grid>
+    <StackLayout Orientation="Horizontal">
+        <Label Text="BURN FAT,LOSE WEIGHT" TextColor="Teal" FontSize="25" HorizontalOptions="CenterAndExpand" FontAttributes="Bold" Margin="13,130,0,0"></Label>
+    </StackLayout>
+        <StackLayout Orientation="Horizontal">
+            <Label Text="GET HEALTHY!" TextColor="Teal" FontSize="30" HorizontalOptions="CenterAndExpand" Margin="30,170,0,0" FontAttributes="Bold"></Label>
+        </StackLayout>
+   <StackLayout Orientation="Horizontal" VerticalOptions="CenterAndExpand">
+        
+        <Image Source="icon/app-icon" HeightRequest="170" WidthRequest="170"  Margin="100,5,5,5" HorizontalOptions="Center" VerticalOptions="Center"/>
+         
+        </StackLayout> 
+         <StackLayout Orientation="Vertical">
+            <Label Text="GYMR" TextColor="Teal" FontSize="45"
+                   HorizontalOptions="CenterAndExpand" 
+                   Margin="0,500,0,0" FontAttributes="Bold"></Label>
+          
+            <Button Text="Continue"
+                    BackgroundColor="Teal"
+                    TextColor="White"
+                    WidthRequest="20"
+                    Margin="65,55,70,5"
+                    FontSize="Large"
+                    Clicked="Handle_Clicked"/>
+            
+        </StackLayout>
+        
+
+        </Grid>
+
+</ContentPage>

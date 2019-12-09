@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             x:Class="Gymr.Views.DashBoard">
+    
+    <Grid ColumnSpacing="0" Margin="0,0,0,10" RowSpacing="0">
+        
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="1"/>
+            <RowDefinition Height="60"/>
+         </Grid.RowDefinitions>
+        
+        <ContentView x:Name="PlaceHolder" Grid.Row="0"/>
+        <BoxView BackgroundColor="Silver" Grid.Row="1"/>
+        
+        <Grid ColumnSpacing="0" 
+              BackgroundColor="Transparent" RowSpacing="0" Grid.Row="2">
+            
+            <Grid.ColumnDefinitions>
+                
+                <ColumnDefinition Width="*"/>
+                 <ColumnDefinition Width="*"/>                                      
+                 <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                 <ColumnDefinition Width="*"/>
+                
+            </Grid.ColumnDefinitions>
+            
+            <!-- This is my Tab View-->
+            
+            <StackLayout Spacing="0" VerticalOptions="CenterAndExpand" Grid.Column="0">
+                <Image HeightRequest="30" Source="user"/>
+                <Label  FontSize="12" Text="Profile" HorizontalTextAlignment="Center" TextColor="Black"/>
+                 <StackLayout.GestureRecognizers>
+                 <TapGestureRecognizer Tapped="profile_tapped"/>
+                 </StackLayout.GestureRecognizers>
+                
+            </StackLayout>
+            
+            <StackLayout Spacing="0"  Grid.Column="1" VerticalOptions="CenterAndExpand" >
+                <Image HeightRequest="30" Margin="0,0,0,0" Source="user"/>
+                <Label Margin="0,0,0,0" FontSize="12" Text="New"  HorizontalTextAlignment="Center" TextColor="Black"/>
+               
+                <StackLayout.GestureRecognizers>
+                 <TapGestureRecognizer Tapped="Handle_Tapped"/>
+                 </StackLayout.GestureRecognizers>
+            </StackLayout>
+            
+             <StackLayout Spacing="0" VerticalOptions="CenterAndExpand" Grid.Column="2">
+              
+                <Image HeightRequest="30"  Source="calendar"/>
+               
+                 <Label  FontSize="12" Text="Calendar" HorizontalOptions="Center" TextColor="Black"/>
+                 <StackLayout.GestureRecognizers>
+                 <TapGestureRecognizer Tapped="calendar_tapped"/>
+                 </StackLayout.GestureRecognizers>
+                
+            </StackLayout>
+            
+             <StackLayout Spacing="0" VerticalOptions="CenterAndExpand" Grid.Column="3">
+                <Image HeightRequest="30"   Source="add_square"/>
+                <Label  FontSize="12" Text="Workout" HorizontalOptions="Center" TextColor="Black"/>
+                <StackLayout.GestureRecognizers>
+                <TapGestureRecognizer Tapped="addExercise_tapped"/>
+                </StackLayout.GestureRecognizers>
+              </StackLayout>
+            
+             <StackLayout Spacing="0" Grid.Column="4" VerticalOptions="CenterAndExpand">
+                <Image HeightRequest="30"  Source="exercise"/>
+                <Label  FontSize="12" Text="Exercise" HorizontalOptions="Center" TextColor="Black"/>
+                <StackLayout.GestureRecognizers>
+                <TapGestureRecognizer Tapped="exercise_tapped"/>
+                </StackLayout.GestureRecognizers>
+            </StackLayout>
+            
+           
+        </Grid>
+        
+    </Grid>
+    
+</ContentPage>
